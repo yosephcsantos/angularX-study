@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'; 
 
-import { PassengerDashboardService } from '../../passenger-dashboard.service';
+//Models
+import { Passenger } from '../../../shared-module/models/passenger.interface';
 
-import { Passenger } from '../../models/passenger.interface';
+//services
+import { PassengerDashboardService } from '../../../shared-module/services/passenger-dashboard.service';
 
 @Component({
   selector: 'passenger-dashboard',
@@ -12,9 +14,11 @@ import { Passenger } from '../../models/passenger.interface';
       <passenger-count
         [items]="passengers">
       </passenger-count>
-      <div *ngFor="let passenger of passengers;">
-        {{ passenger.fullname }}
-      </div>
+      
+      <passenger-list
+        [passengerList]="passengers">
+      </passenger-list>
+
       <passenger-detail
         *ngFor="let passenger of passengers;"
         [detail]="passenger"

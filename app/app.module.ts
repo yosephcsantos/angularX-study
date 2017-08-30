@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
-import { PassengerDashboardModule } from './passenger-dashboard/passenger-dashboard.module';
+import { PassengerModule } from './passenger-module/passenger.module';
 
 import { AppComponent } from './app.component';
 
@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     CommonModule,
-    PassengerDashboardModule
+    PassengerModule
   ],
   bootstrap: [AppComponent]
 })

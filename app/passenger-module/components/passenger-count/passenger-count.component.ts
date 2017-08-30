@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 
-import { Passenger } from '../../models/passenger.interface';
+// Models
+import { Passenger } from '../../../shared-module/models/passenger.interface';
 
 @Component({
   selector: 'passenger-count',

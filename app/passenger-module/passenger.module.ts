@@ -8,25 +8,28 @@ import { PassengerDashboardComponent } from './containers/passenger-dashboard/pa
 // components
 import { PassengerCountComponent } from './components/passenger-count/passenger-count.component';
 import { PassengerDetailComponent } from './components/passenger-detail/passenger-detail.component';
+import { PassengerListComponent } from './components/passenger-list/passenger-list.component';
 
 // service
-import { PassengerDashboardService } from './passenger-dashboard.service';
+import { PassengerDashboardService } from '../shared-module/services/passenger-dashboard.service';
+
+// modules
+import { SharedModule } from '../shared-module/shared.module';
 
 @NgModule({
   declarations: [
     PassengerDashboardComponent,
     PassengerCountComponent,
-    PassengerDetailComponent
+    PassengerDetailComponent,
+    PassengerListComponent
   ],
   imports: [
     CommonModule,
-    HttpModule
+    HttpModule,
+    SharedModule
   ],
   exports: [
     PassengerDashboardComponent
-  ],
-  providers: [
-    PassengerDashboardService
   ]
 })
-export class PassengerDashboardModule {}
+export class PassengerModule {}
