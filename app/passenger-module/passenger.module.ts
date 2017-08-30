@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 
 // containers
 import { PassengerDashboardComponent } from './containers/passenger-dashboard/passenger-dashboard.component';
+import { PassengerFormComponent } from './containers/passenger-form/passenger-form.component';
 
 // components
 import { PassengerCountComponent } from './components/passenger-count/passenger-count.component';
@@ -21,7 +22,8 @@ import { SharedModule } from '../shared-module/shared.module';
     PassengerDashboardComponent,
     PassengerCountComponent,
     PassengerDetailComponent,
-    PassengerListComponent
+    PassengerListComponent,
+    PassengerFormComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { SharedModule } from '../shared-module/shared.module';
     SharedModule
   ],
   exports: [
-    PassengerDashboardComponent
+    PassengerDashboardComponent,
+    PassengerFormComponent
   ]
 })
 export class PassengerModule {}

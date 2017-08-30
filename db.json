@@ -2,28 +2,30 @@
   "passengers": [
     {
       "id": 1,
-      "fullname": "Urias",
+      "fullname": "Yoseph Santos",
+      "checkedIn": true,
+      "checkInDate": 1490742000000,
+      "children": null
+    },
+    {
+      "id": 2,
+      "fullname": "Jeniffer Cunha",
+      "checkedIn": true,
+      "checkInDate": 1490742000000,
+      "children": null
+    },
+    {
+      "id": 3,
+      "fullname": "Ucreitins Giuli",
       "checkedIn": true,
       "checkInDate": 1490742000000,
       "children": null
     },
     {
       "id": 4,
-      "fullname": "Travis Braker",
+      "fullname": "Clark Kent",
       "checkedIn": true,
-      "checkInDate": 1488412800000,
-      "children": [
-        {
-          "name": "Jessica",
-          "age": 1
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "fullname": "Tina",
-      "checkedIn": false,
-      "checkInDate": null,
+      "checkInDate": 1490742000000,
       "children": null
     }
   ]

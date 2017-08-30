@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-
+import { Router } from '@angular/router';
 // Models
 import { Passenger } from '../../../shared-module/models/passenger.interface';
 
@@ -14,7 +14,7 @@ import { Passenger } from '../../../shared-module/models/passenger.interface';
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let passenger of passengerList;">
+          <tr class="u-cursor-pointer" *ngFor="let passenger of passengerList;" (click)="handlePassenger(passenger.id)">
             <td>{{ passenger.fullname }}</td>
             <td>
               {{ passenger.checkInDate ? (passenger.checkInDate | date: 'yMMMMd' | uppercase) : 'Not checked in' }}
@@ -27,4 +27,12 @@ import { Passenger } from '../../../shared-module/models/passenger.interface';
 
 export class PassengerListComponent {
     @Input() passengerList: Passenger[];
+
+    constructor(
+      private route: Router
+    ) {}
+
+    handlePassenger( passengerId: number ) {
+      this.route.navigate(['passenger/', {id: passengerId}])
+    }
 }

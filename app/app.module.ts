@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
 import { PassengerModule } from './passenger-module/passenger.module';
+import { AppRoutesModule } from './app-routes-module/app-routes.module';
 
 import { AppComponent } from './app.component';
 
@@ -11,6 +12,7 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
+    AppRoutesModule,
     BrowserModule,
     CommonModule,
     PassengerModule
