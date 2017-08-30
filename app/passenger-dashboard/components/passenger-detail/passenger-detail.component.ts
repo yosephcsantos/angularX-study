@@ -4,7 +4,7 @@ import { Passenger } from '../../models/passenger.interface';
 
 @Component({
   selector: 'passenger-detail',
-  styleUrls: ['passenger-detail.component.scss'],
+  styleUrls: ['passenger-detail.component.css'],
   template: `
     <div>
       <span class="status" [class.checked-in]="detail.checkedIn"></span>

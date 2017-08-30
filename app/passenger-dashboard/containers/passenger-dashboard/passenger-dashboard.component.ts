@@ -6,7 +6,7 @@ import { Passenger } from '../../models/passenger.interface';
 
 @Component({
   selector: 'passenger-dashboard',
-  styleUrls: ['passenger-dashboard.component.scss'],
+  styleUrls: ['passenger-dashboard.component.css'],
   template: `
     <div>
       <passenger-count

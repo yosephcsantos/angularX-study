@@ -1,14 +1,14 @@
-var path = require('path');
-var fs = require('fs');
+const path = require('path');
+const fs = require('fs');
 
-var webpack = require('webpack');
-var server = require('webpack-dev-server');
-var ts = require('awesome-typescript-loader');
-var chalk = require('chalk');
-var ProgressBarPlugin = require('progress-bar-webpack-plugin');
-var jsonServer = require('json-server');
+const webpack = require('webpack');
+const server = require('webpack-dev-server');
+const ts = require('awesome-typescript-loader');
+const chalk = require('chalk');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const jsonServer = require('json-server');
 
-var cwd = process.cwd();
+const cwd = process.cwd();
 
 module.exports = {
   cache: true,
@@ -70,19 +70,10 @@ module.exports = {
         loader: 'raw-loader'
       },
       {
-        test: /\.scss$/,
-        use: [
+        test: /\.css$/,
+        use:[
           {
             loader: 'raw-loader'
-          },
-          {
-            loader: 'resolve-url-loader'
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true
-            }
           }
         ]
       }
