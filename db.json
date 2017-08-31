@@ -2,7 +2,7 @@
   "guests": [
     {
       "id": 1,
-      "fullname": "Yoseph Santos",
+      "fullname": "Yoseph Cunha",
       "checkedIn": true,
       "checkInDate": 1490742000000,
       "children": null
@@ -17,20 +17,13 @@
     {
       "id": 3,
       "fullname": "Louise Cunha",
-      "checkedIn": true,
-      "checkInDate": 1490742000000,
+      "checkedIn": false,
+      "checkInDate": null,
       "children": null
     },
     {
       "id": 4,
       "fullname": "Todd Motto",
-      "checkedIn": true,
-      "checkInDate": 1490742000000,
-      "children": null
-    },
-    {
-      "id": 5,
-      "fullname": "Jhon Papa",
       "checkedIn": true,
       "checkInDate": 1490742000000,
       "children": null

@@ -1,16 +1,8 @@
 <table class="table table-striped">
     <thead>
         <tr>
-        <th class="u-font--18 u-font--bolder">Guest name</th>
-        <th class="u-font--18 u-font--bolder">Checkin date</th>
+            <ng-content select="th"></ng-content>
         </tr>
     </thead>
-    <tbody>
-        <tr class="u-cursor-pointer" *ngFor="let guest of guestList;" (click)="handlePassenger(guest.id)">
-        <td>{{ guest.fullname }}</td>
-        <td>
-            {{ guest.checkInDate ? (guest.checkInDate | date: 'yMMMMd' | uppercase) : 'Not checked in' }}
-        </td>
-        </tr>
-    </tbody>
+    <ng-content select="tbody"></ng-content>
 </table>

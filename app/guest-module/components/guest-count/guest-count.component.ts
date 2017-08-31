@@ -9,8 +9,8 @@ import { Guest } from '../../../shared-module/models/guest.interface';
 })
 
 export class PassengerCountComponent {
-  @Input()
-  items: Guest[];
+  @Input() items: Guest[];
+
   checkedInCount(): number {
     if (!this.items) return;
     return this.items.filter((guest: Guest) => guest.checkedIn).length;

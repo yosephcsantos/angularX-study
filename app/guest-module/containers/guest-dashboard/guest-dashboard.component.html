@@ -1,13 +1,23 @@
-<div>
-    <h3>Ibis Rio de Janeiro</h3>
-    
-    <guest-count
-        [items]="guests">
-    </guest-count>
-    
-    <br>
+<page-default>
+    <div class="header-data">
+        <h3>Ibis Rio de Janeiro</h3>
+        
+        <guest-count
+            [items]="guests">
+        </guest-count>
+    </div>
 
-    <guest-list
-        [guestList]="guests">
+    <guest-list class="body-data">
+        <th class="u-font--18 u-font--bolder">Guest name</th>
+        <th class="u-font--18 u-font--bolder">Checkin date</th>
+        
+        <tbody>
+            <tr class="u-cursor-pointer" *ngFor="let guest of guests;" (click)="handlePassenger(guest.id)">
+                <td>{{ guest.fullname }}</td>
+                <td>
+                    {{ guest.checkInDate ? (guest.checkInDate | date: 'yMMMMd' | uppercase) : 'Not checked in' }}
+                </td> 
+            </tr>
+        </tbody>
     </guest-list>
-</div>
+</page-default>
