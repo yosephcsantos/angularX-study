@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
-import { PassengerModule } from './passenger-module/passenger.module';
+import { PassengerModule } from './guest-module/guest.module';
 import { AppRoutesModule } from './app-routes-module/app-routes.module';
 
 import { AppComponent } from './app.component';

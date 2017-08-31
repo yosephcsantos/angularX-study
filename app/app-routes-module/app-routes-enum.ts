@@ -1,4 +1,4 @@
 export enum AppRoutesEnum {
-  Passengers = <any>'',
-  Passenger = <any>'passenger'
+  Guests = <any>'',
+  Guest = <any>'guest'
 }

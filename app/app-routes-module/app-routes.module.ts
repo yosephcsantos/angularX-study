@@ -1,14 +1,14 @@
 import { AppComponent } from './../app.component';
-import { PassengerDashboardComponent } from './../passenger-module/containers/passenger-dashboard/passenger-dashboard.component';
-import { PassengerFormComponent } from './../passenger-module/containers/passenger-form/passenger-form.component';
+import { GuestDashboardComponent } from './../guest-module/containers/guest-dashboard/guest-dashboard.component';
+import { GuestFormComponent } from './../guest-module/containers/guest-form/guest-form.component';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 export const appRoutes: Routes = [
-  { path: '', component: PassengerDashboardComponent, pathMatch: 'full' },
-  { path: 'passenger', component: PassengerFormComponent, pathMatch: 'full'},
-  { path: '**', component: PassengerDashboardComponent }
+  { path: '', component: GuestDashboardComponent, pathMatch: 'full' },
+  { path: 'guest', component: GuestFormComponent, pathMatch: 'full'},
+  { path: '**', component: GuestDashboardComponent }
 ];
 
 @NgModule({

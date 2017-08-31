@@ -73,3 +73,9 @@ h4 {
 .u-cursor-pointer {
   cursor: pointer;
 }
+.u-font--18 {
+  font-size: 18px;
+}
+.u-font--bolder {
+  font-weight: bolder;
+}
