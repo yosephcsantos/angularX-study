@@ -8,7 +8,7 @@ import { Guest } from '../../../shared-module/models/guest.interface';
   templateUrl: 'guest-count.component.html' 
 })
 
-export class PassengerCountComponent {
+export class GuestCountComponent {
   @Input() items: Guest[];
 
   checkedInCount(): number {

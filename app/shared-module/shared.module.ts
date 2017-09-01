@@ -6,16 +6,19 @@ import { GuestDashboardService } from './services/guest-dashboard.service';
 
 // components
 import { PageDefaultComponent } from './components/page-default/page-default.component';
+import { AppCheckboxComponent } from './components/app-checkbox/app-checkbox.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    PageDefaultComponent
+    PageDefaultComponent,
+    AppCheckboxComponent
   ],
   exports: [
-    PageDefaultComponent
+    PageDefaultComponent,
+    AppCheckboxComponent
   ],
   providers: [
     GuestDashboardService

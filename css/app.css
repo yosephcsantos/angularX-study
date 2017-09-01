@@ -79,3 +79,12 @@ h4 {
 .u-font--bolder {
   font-weight: bolder;
 }
+.u-display--inline {
+  display: inline;
+}
+.u-vertical-offest--1 {
+  margin: 10px;
+}
+.u-vertical-offest--2 {
+  margin: 20px;
+}

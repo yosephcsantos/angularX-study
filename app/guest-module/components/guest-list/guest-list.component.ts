@@ -6,4 +6,4 @@ import { Router } from '@angular/router';
     templateUrl: 'guest-list.component.html' 
 })
 
-export class PassengerListComponent {}
+export class GuestListComponent {}

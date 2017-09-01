@@ -17,7 +17,8 @@ import { AppRoutesEnum } from '../../../app-routes-module/app-routes-enum';
 })
 
 export class GuestDashboardComponent implements OnInit {
-  guests: Guest[];
+  public guests: Guest[];
+  public checkedOption: boolean;
   
   constructor(
     private guestService: GuestDashboardService,
@@ -32,5 +33,9 @@ export class GuestDashboardComponent implements OnInit {
 
   handlePassenger( guestId: number ) {
     this.router.navigate([AppRoutesEnum.Guest, { id: guestId }]);
+  }
+
+  toggleCheckbox(isChecked: boolean) {
+    this.checkedOption = isChecked; 
   }
 }

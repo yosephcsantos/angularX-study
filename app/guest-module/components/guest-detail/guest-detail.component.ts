@@ -11,7 +11,7 @@ import { AppRoutesEnum } from '../../../app-routes-module/app-routes-enum';
   styleUrls: ['guest-detail.component.css'],
   templateUrl: 'guest-detail.component.html' 
 })
-export class PassengerDetailComponent implements OnChanges {
+export class GuestDetailComponent implements OnChanges {
   public editing: boolean = false;
   
   @Input()

@@ -7,9 +7,9 @@ import { GuestDashboardComponent } from './containers/guest-dashboard/guest-dash
 import { GuestFormComponent } from './containers/guest-form/guest-form.component';
 
 // components
-import { PassengerCountComponent } from './components/guest-count/guest-count.component';
-import { PassengerDetailComponent } from './components/guest-detail/guest-detail.component';
-import { PassengerListComponent } from './components/guest-list/guest-list.component';
+import { GuestCountComponent } from './components/guest-count/guest-count.component';
+import { GuestDetailComponent } from './components/guest-detail/guest-detail.component';
+import { GuestListComponent } from './components/guest-list/guest-list.component';
 
 // service
 import { GuestDashboardService } from '../shared-module/services/guest-dashboard.service';
@@ -20,9 +20,9 @@ import { SharedModule } from '../shared-module/shared.module';
 @NgModule({
   declarations: [
     GuestDashboardComponent,
-    PassengerCountComponent,
-    PassengerDetailComponent,
-    PassengerListComponent,
+    GuestCountComponent,
+    GuestDetailComponent,
+    GuestListComponent,
     GuestFormComponent
   ],
   imports: [
@@ -35,4 +35,4 @@ import { SharedModule } from '../shared-module/shared.module';
     GuestFormComponent
   ]
 })
-export class PassengerModule {}
+export class GuestModule {}
