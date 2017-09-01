@@ -8,7 +8,8 @@
     
         <div *ngIf="editing">
             <input 
-                type="text" 
+                type="text"
+                name="name"
                 [value]="detail.fullname"
                 (input)="onNameChange(name.value)"
                 #name>
