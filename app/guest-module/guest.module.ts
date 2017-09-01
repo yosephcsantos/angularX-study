@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 // containers
 import { GuestDashboardComponent } from './containers/guest-dashboard/guest-dashboard.component';
 import { GuestFormComponent } from './containers/guest-form/guest-form.component';
+import { GuestFilterComponent } from './containers/guest-filter/guest-filter.component';
 
 // components
 import { GuestCountComponent } from './components/guest-count/guest-count.component';
@@ -23,7 +24,8 @@ import { SharedModule } from '../shared-module/shared.module';
     GuestCountComponent,
     GuestDetailComponent,
     GuestListComponent,
-    GuestFormComponent
+    GuestFormComponent,
+    GuestFilterComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,8 @@ import { SharedModule } from '../shared-module/shared.module';
   ],
   exports: [
     GuestDashboardComponent,
-    GuestFormComponent
+    GuestFormComponent,
+    GuestFilterComponent
   ]
 })
 export class GuestModule {}

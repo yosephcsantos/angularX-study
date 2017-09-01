@@ -5,15 +5,15 @@
         <guest-count
             [items]="guests">
         </guest-count>
+    </div>
 
-        <div class="u-vertical-offest--1"></div>
-
+    <guest-filter class="filter-data">
         <app-checkbox
             (checked)="toggleCheckbox($event)">
             <p class="u-display--inline">CheckIn done</p>
         </app-checkbox>
-    </div>
-    
+    </guest-filter>
+
     <guest-list class="body-data">
         <th class="u-font--18 u-font--bolder">Guest name</th>
         <th class="u-font--18 u-font--bolder">Checkin date</th>
