@@ -1,26 +1,40 @@
+import { Component, ContentChild, AfterContentInit, ContentChildren, QueryList } from '@angular/core';
+
+// components
 import { AppCheckboxComponent } from './../../../shared-module/components/app-checkbox/app-checkbox.component';
-import { Component, ContentChild, AfterContentInit } from '@angular/core';
+
+// models
+import { FilterType } from './../../../shared-module/models/guest.interface';
 
 @Component({
   selector: 'guest-filter',
   template: `
     <div>
         <ng-content select="app-checkbox"></ng-content>
-        <div *ngIf="isFiltering">
-            The checkIn filter was checked!
+        <div *ngIf="isFilteringCheckin && !isFilteringCheckout">
+            The list show only guests with Checkin Done!
+        </div>
+        <div *ngIf="isFilteringCheckout && !isFilteringCheckin">
+            The list show only guests with Checkout Done!
         </div>
     </div>
   `
 })
 
 export class GuestFilterComponent implements AfterContentInit {
-    public isFiltering: boolean;
-  
-    @ContentChild(AppCheckboxComponent) isCheckIn: AppCheckboxComponent;
+    public isFilteringCheckin: boolean;
+    public isFilteringCheckout: boolean;
+    
+    @ContentChildren(AppCheckboxComponent) isCheckIn: QueryList<AppCheckboxComponent>;
 
     ngAfterContentInit() {
-        if (this.isCheckIn) {
-            this.isCheckIn.checked.subscribe((checked: boolean) => this.isFiltering = checked);
-        }
+        this.isCheckIn.forEach((item, index) => {
+            item.checked.subscribe((checked: boolean) => {
+                if(index === FilterType.checkedIn)
+                    this.isFilteringCheckin = checked;
+                if(index === FilterType.checkedOut)
+                    this.isFilteringCheckout = checked;
+            });
+        });
     }
 }

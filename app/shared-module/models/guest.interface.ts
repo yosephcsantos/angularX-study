@@ -11,3 +11,8 @@ export interface Guest {
   checkInDate: number | null,
   children: Child[] | null
 }
+
+export enum FilterType {
+  checkedIn = 0,
+  checkedOut = 1
+}
