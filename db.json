@@ -4,28 +4,45 @@
       "id": 1,
       "fullname": "Yoseph Cunha",
       "checkedIn": true,
+      "checkedOut": false,
       "checkInDate": 1490742000000,
+      "checkOutDate": null,
       "children": null
     },
     {
       "id": 2,
       "fullname": "Jeniffer Carvalho",
       "checkedIn": true,
+      "checkedOut": false,
       "checkInDate": 1490742000000,
+      "checkOutDate": null,
       "children": null
     },
     {
       "id": 3,
-      "fullname": "Louise Cunha",
+      "fullname": "Louise Slaviero",
       "checkedIn": false,
+      "checkedOut": false,
       "checkInDate": null,
+      "checkOutDate": null,
       "children": null
     },
     {
       "id": 4,
       "fullname": "Todd Motto",
       "checkedIn": true,
+      "checkedOut": true,
       "checkInDate": 1490742000000,
+      "checkOutDate": 1504278899877,
+      "children": null
+    },
+    {
+      "id": 5,
+      "fullname": "Calin Einst",
+      "checkedIn": true,
+      "checkedOut": true,
+      "checkInDate": 1490752000000,
+      "checkOutDate": 1504278899877,
       "children": null
     }
   ]

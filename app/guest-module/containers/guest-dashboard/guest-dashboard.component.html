@@ -3,26 +3,35 @@
         <h3>Ibis Rio de Janeiro</h3>
         
         <guest-count
-            [items]="guests">
+            [items]="guestsView">
         </guest-count>
     </div>
 
     <guest-filter class="filter-data">
         <app-checkbox
-            (checked)="toggleCheckbox($event)">
+            (checked)="toggleCheckIn($event)">
             <p class="u-display--inline">CheckIn done</p>
+        </app-checkbox>
+
+        <app-checkbox
+            (checked)="toggleCheckOut($event)">
+            <p class="u-display--inline">CheckOut done</p>
         </app-checkbox>
     </guest-filter>
 
     <guest-list class="body-data">
         <th class="u-font--18 u-font--bolder">Guest name</th>
         <th class="u-font--18 u-font--bolder">Checkin date</th>
+        <th class="u-font--18 u-font--bolder">Checkout date</th>
         
         <tbody>
-            <tr class="u-cursor-pointer" *ngFor="let guest of guests;" (click)="handlePassenger(guest.id)">
+            <tr class="u-cursor-pointer" *ngFor="let guest of guestsView;" (click)="handlePassenger(guest.id)">
                 <td>{{ guest.fullname }}</td>
                 <td>
                     {{ guest.checkInDate ? (guest.checkInDate | date: 'yMMMMd' | uppercase) : 'Not checked in' }}
+                </td> 
+                <td>
+                    {{ guest.checkOutDate ? (guest.checkOutDate | date: 'yMMMMd' | uppercase) : 'Not checked out' }}
                 </td> 
             </tr>
         </tbody>

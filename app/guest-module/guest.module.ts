@@ -13,7 +13,7 @@ import { GuestDetailComponent } from './components/guest-detail/guest-detail.com
 import { GuestListComponent } from './components/guest-list/guest-list.component';
 
 // service
-import { GuestDashboardService } from '../shared-module/services/guest-dashboard.service';
+import { GuestDashboardService } from '../shared-module/resources/guest-dashboard.resource';
 
 // modules
 import { SharedModule } from '../shared-module/shared.module';

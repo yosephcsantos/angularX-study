@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // service
-import { GuestDashboardService } from './services/guest-dashboard.service';
+import { GuestDashboardService } from './resources/guest-dashboard.resource';
 
 // components
 import { PageDefaultComponent } from './components/page-default/page-default.component';

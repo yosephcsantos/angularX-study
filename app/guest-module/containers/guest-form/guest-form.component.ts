@@ -7,8 +7,8 @@ import 'rxjs/add/operator/switchMap';
 //Models
 import { Guest } from '../../../shared-module/models/guest.interface';
 
-//services
-import { GuestDashboardService } from '../../../shared-module/services/guest-dashboard.service';
+//resources
+import { GuestDashboardService } from '../../../shared-module/resources/guest-dashboard.resource';
 
 //Routes
 import { AppRoutesEnum } from '../../../app-routes-module/app-routes-enum';
