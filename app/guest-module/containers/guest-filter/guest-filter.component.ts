@@ -17,7 +17,6 @@ export class GuestFilterComponent implements AfterContentInit {
     public isFiltering: boolean;
   
     @ContentChild(AppCheckboxComponent) isCheckIn: AppCheckboxComponent;
-    @ContentChild(AppCheckboxComponent) isCheckOut: AppCheckboxComponent;
 
     ngAfterContentInit() {
         if (this.isCheckIn) {
