@@ -11,6 +11,7 @@ import { GuestFilterComponent } from './containers/guest-filter/guest-filter.com
 import { GuestCountComponent } from './components/guest-count/guest-count.component';
 import { GuestDetailComponent } from './components/guest-detail/guest-detail.component';
 import { GuestListComponent } from './components/guest-list/guest-list.component';
+import { GuestMessageComponent } from './components/guest-message/guest-message.component';
 
 // modules
 import { SharedModule } from '../shared-module/shared.module';
@@ -22,7 +23,8 @@ import { SharedModule } from '../shared-module/shared.module';
     GuestDetailComponent,
     GuestListComponent,
     GuestFormComponent,
-    GuestFilterComponent
+    GuestFilterComponent,
+    GuestMessageComponent
   ],
   imports: [
     CommonModule,
