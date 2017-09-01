@@ -11,7 +11,7 @@ import { Guest } from '../models/guest.interface';
 const GUEST_API: string = '/api/guests';
 
 @Injectable()
-export class GuestDashboardService {
+export class GuestDashboardResource {
   constructor(private http: Http) {}
 
   getGuests(): Observable<Guest[]> {

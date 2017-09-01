@@ -8,7 +8,7 @@ import 'rxjs/add/operator/switchMap';
 import { Guest } from '../../../shared-module/models/guest.interface';
 
 //resources
-import { GuestDashboardService } from '../../../shared-module/resources/guest-dashboard.resource';
+import { GuestDashboardResource } from '../../../shared-module/resources/guest-dashboard.resource';
 
 //Routes
 import { AppRoutesEnum } from '../../../app-routes-module/app-routes-enum';
@@ -23,23 +23,23 @@ export class GuestFormComponent implements OnInit {
   public guests: Guest[];
   
   constructor(
-    private guestService: GuestDashboardService,
+    private guestDashboardResource: GuestDashboardResource,
     private route: ActivatedRoute,
     private router: Router
   ){}
 
   ngOnInit() {
     this.route.params
-      .switchMap((data: Guest) => this.guestService.getGuest(data.id))
+      .switchMap((data: Guest) => this.guestDashboardResource.getGuest(data.id))
       .subscribe((data: Guest) => this.guest = data);
 
-    this.guestService
+    this.guestDashboardResource
       .getGuests()
       .subscribe((data: Guest[]) => this.guests = data);
   }
 
   handleEdit(event: Guest) {
-    this.guestService
+    this.guestDashboardResource
       .updateGuest(event)
       .subscribe((data: Guest) => {
         this.guests = this.guests.map((guest: Guest) => {
@@ -54,7 +54,7 @@ export class GuestFormComponent implements OnInit {
   }
 
   handleRemove(event: Guest) {
-    this.guestService
+    this.guestDashboardResource
       .removeGuest(event)
       .subscribe((data: Guest) => {
         this.guests = this.guests.filter((guest: Guest) => {

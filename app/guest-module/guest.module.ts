@@ -12,9 +12,6 @@ import { GuestCountComponent } from './components/guest-count/guest-count.compon
 import { GuestDetailComponent } from './components/guest-detail/guest-detail.component';
 import { GuestListComponent } from './components/guest-list/guest-list.component';
 
-// service
-import { GuestDashboardService } from '../shared-module/resources/guest-dashboard.resource';
-
 // modules
 import { SharedModule } from '../shared-module/shared.module';
 

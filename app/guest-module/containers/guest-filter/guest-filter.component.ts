@@ -7,7 +7,7 @@ import { Component, ContentChild, AfterContentInit } from '@angular/core';
     <div>
         <ng-content select="app-checkbox"></ng-content>
         <div *ngIf="isFiltering">
-            The list has only Guests with checkIn done!
+            The checkIn filter was checked!
         </div>
     </div>
   `
@@ -20,13 +20,8 @@ export class GuestFilterComponent implements AfterContentInit {
     @ContentChild(AppCheckboxComponent) isCheckOut: AppCheckboxComponent;
 
     ngAfterContentInit() {
-        console.log("guest-filter ", this.isCheckIn)
         if (this.isCheckIn) {
             this.isCheckIn.checked.subscribe((checked: boolean) => this.isFiltering = checked);
-        }
-
-        if (this.isCheckOut) {
-            this.isCheckOut.checked.subscribe((checked: boolean) => this.isFiltering = checked);
         }
     }
 }

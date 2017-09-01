@@ -13,7 +13,7 @@ export class AppCheckboxComponent {
 
   @Output() checked: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  onChecked(value: boolean) {
+  onChecked(value: any) {
     this.checked.emit(value);
   }
 
