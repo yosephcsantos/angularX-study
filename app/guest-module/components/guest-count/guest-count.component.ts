@@ -9,7 +9,7 @@ import { Guest } from '../../../shared-module/models/guest.interface';
 })
 
 export class GuestCountComponent {
-  @Input() items: Guest[];
+  public items: Guest[];
 
   checkedInCount(): number {
     if (!this.items) return;

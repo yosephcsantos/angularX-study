@@ -1,5 +1,5 @@
 import { Component, OnChanges, Input, Output, ChangeDetectorRef, Renderer,
-  EventEmitter, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+  EventEmitter, ViewChild, ElementRef, AfterViewInit, ViewEncapsulation } from '@angular/core';
 
 // Models
 import { Guest } from '../../../shared-module/models/guest.interface';
@@ -9,6 +9,10 @@ import { AppRoutesEnum } from '../../../app-routes-module/app-routes-enum';
 
 @Component({
   selector: 'guest-detail',
+  //Native (Não tem participação nenhuma com os estilos do projeto, usa o shadowDom), 
+  //None (Não encapsula nada)
+  //Emulated escopo nativo de estilos e adiciona id no elemento para pré processar as próprias regras de estilo
+  encapsulation: ViewEncapsulation.Emulated,
   styleUrls: ['guest-detail.component.css'],
   templateUrl: 'guest-detail.component.html' 
 })

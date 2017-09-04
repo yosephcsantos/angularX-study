@@ -11,3 +11,13 @@
 .status.checked-in {
   background: #2ecc71;
 }
+
+button {
+  cursor: pointer;
+  background: #9f72e6;
+  border: 0;
+  border-radius: 2px;
+  padding: 5px 10px;
+  text-align: center;
+  color: #fff;
+}

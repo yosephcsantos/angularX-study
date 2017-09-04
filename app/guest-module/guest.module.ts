@@ -12,6 +12,7 @@ import { GuestCountComponent } from './components/guest-count/guest-count.compon
 import { GuestDetailComponent } from './components/guest-detail/guest-detail.component';
 import { GuestListComponent } from './components/guest-list/guest-list.component';
 import { GuestMessageComponent } from './components/guest-message/guest-message.component';
+import { AppCheckboxComponent } from './../shared-module/components/app-checkbox/app-checkbox.component';
 
 // modules
 import { SharedModule } from '../shared-module/shared.module';
@@ -35,6 +36,10 @@ import { SharedModule } from '../shared-module/shared.module';
     GuestDashboardComponent,
     GuestFormComponent,
     GuestFilterComponent
+  ],
+  entryComponents: [
+    GuestCountComponent,
+    AppCheckboxComponent
   ]
 })
 export class GuestModule {}

@@ -1,10 +1,12 @@
 <page-default>
     <div class="header-data">
         <h3>Ibis Rio de Janeiro</h3>
-        
-        <guest-count
-            [items]="guestsView">
-        </guest-count>
+
+        <!-- Inject Component by ComponentFactoryResolver  -->
+        <div #counter></div>
+        <template #counterType let-name let-location="location">
+            <p>{{ name }}: {{ location }}</p>
+        </template>
     </div>
 
     <guest-filter class="filter-data">
@@ -12,6 +14,10 @@
             (checked)="toggleCheckIn($event)">
             <p class="u-display--inline">CheckIn done</p>
         </app-checkbox>
+
+        <div #checkboxEntry>
+            <p class="u-display--inline">Teste</p>
+        </div>
 
         <app-checkbox
             (checked)="toggleCheckOut($event)">
