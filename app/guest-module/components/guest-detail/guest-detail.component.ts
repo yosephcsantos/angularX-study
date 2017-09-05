@@ -53,6 +53,10 @@ export class GuestDetailComponent implements OnChanges {
   onNameChange(value: string) {
     this.detail.fullname = value;
   }
+
+  onCreditCardChange(value: string) {
+    this.detail.creditCard = value;
+  }
   
   toggleEdit() {
     if (this.editing) {

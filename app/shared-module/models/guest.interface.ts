@@ -6,6 +6,7 @@ export interface Child {
 export interface Guest {
   id: number,
   fullname: string,
+  creditCard: string,
   checkedIn: boolean,
   checkedOut: boolean,
   checkInDate: number | null,

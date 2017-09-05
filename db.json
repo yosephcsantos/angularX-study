@@ -7,7 +7,8 @@
       "checkedOut": false,
       "checkInDate": 1490742000000,
       "checkOutDate": null,
-      "children": null
+      "children": null,
+      "creditCard": "1234 5678 9865 4328"
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "checkedOut": false,
       "checkInDate": 1490742000000,
       "checkOutDate": null,
-      "children": null
+      "children": null,
+      "creditCard": "9876 1234 6785 4324"
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "checkedOut": false,
       "checkInDate": null,
       "checkOutDate": null,
-      "children": null
+      "children": null,
+      "creditCard": "5421 2345 6789 8768"
     },
     {
       "id": 4,
@@ -34,16 +37,18 @@
       "checkedOut": true,
       "checkInDate": 1490742000000,
       "checkOutDate": 1504278899877,
-      "children": null
+      "children": null,
+      "creditCard": "5678 1232 3232 3232"
     },
     {
       "id": 5,
-      "fullname": "Calin Einst Burs",
+      "fullname": "CALIN EINST",
       "checkedIn": true,
       "checkedOut": true,
       "checkInDate": 1490752000000,
       "checkOutDate": 1504278899877,
-      "children": null
+      "children": null,
+      "creditCard": "2345 6859 4848 9"
     }
   ]
 }

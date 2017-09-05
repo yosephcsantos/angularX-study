@@ -18,6 +18,21 @@
         <div *ngIf="!editing">
             {{ detail.fullname }}
         </div>
+
+        <div *ngIf="editing">
+            <label>Credit Card Number:</label>
+            <input 
+                type="text"
+                name="numberCreditCard"
+                [value]="detail.creditCard"
+                (input)="onCreditCardChange(numberCreditCard.value)"
+                #numberCreditCard
+                credit-card>
+        </div>
+        
+        <div *ngIf="!editing">
+            Credit Card Number: {{ detail.creditCard }}
+        </div>
         
         <div class="date">
             Check in date: 
