@@ -9,6 +9,7 @@ import { GuestDashboardResource } from './resources/guest-dashboard.resource';
 
 // directives
 import { CreditCardDirective } from './directives/credit-card.directive';
+import { TooltipDirective } from './directives/tooltip.directive';
 
 // components
 import { PageDefaultComponent } from './components/page-default/page-default.component';
@@ -21,12 +22,14 @@ import { AppCheckboxComponent } from './components/app-checkbox/app-checkbox.com
   declarations: [
     PageDefaultComponent,
     AppCheckboxComponent,
-    CreditCardDirective
+    CreditCardDirective,
+    TooltipDirective
   ],
   exports: [
     PageDefaultComponent,
     AppCheckboxComponent,
-    CreditCardDirective
+    CreditCardDirective,
+    TooltipDirective
   ],
   providers: [
     GuestDashboardService,

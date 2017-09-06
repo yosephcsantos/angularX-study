@@ -12,6 +12,7 @@ import { FilterType } from './../../../shared-module/models/guest.interface';
   template: `
     <div>
         <ng-content select="app-checkbox"></ng-content>
+        <ng-content select=".helper"></ng-content>
         <guest-message
             [style.display]="(isFilteringCheckin && !isFilteringCheckout ? 'inherit' : 'none')">
         </guest-message>

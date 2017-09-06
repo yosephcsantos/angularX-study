@@ -59,7 +59,6 @@ p {
 body {
   padding: 50px;
 }
-
 h3 {
   font-size: 22px;
   font-weight: 400;
@@ -69,6 +68,47 @@ h4 {
   font-size: 18px;
   font-weight: 300;
   margin: 0;
+}
+.tooltip-container {
+  position: relative;
+  padding-right: 10px;
+}
+.tooltip {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  line-height: 1;
+  font-size: 14px;
+  padding: 5px 7px;
+  border-radius: 5px;
+  position: absolute;
+  top: -2px;
+  left: 100%;
+  white-space: nowrap;
+  display: none;
+}
+.tooltip--active {
+  display: block;
+  opacity: inherit;
+}
+.tooltip:before {
+  position: absolute;
+  content: ' ';
+  top: 50%;
+  margin-top: -5px;
+  left: -5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 5px 0;
+  border-color: transparent rgba(0, 0, 0, 0.7) transparent transparent;
+  display: block;
+}
+span {
+  color: #9f72e6;
+  text-decoration: underline;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
 }
 .u-cursor-pointer {
   cursor: pointer;

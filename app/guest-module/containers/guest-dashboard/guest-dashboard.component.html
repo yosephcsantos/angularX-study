@@ -23,6 +23,15 @@
             (checked)="toggleCheckOut($event)">
             <p class="u-display--inline">CheckOut done</p>
         </app-checkbox>
+   
+        <span
+            tooltip="Filtros para facilitar a busca dos hóspedes"
+            #myTooltip="tooltip"
+                class="helper"
+                (mouseover)="myTooltip.show()"
+                (mouseout)="myTooltip.hide()">
+                (?)
+        </span>
     </guest-filter>
 
     <guest-list class="body-data">
