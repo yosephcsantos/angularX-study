@@ -1,0 +1,14 @@
+<div class="u-vertical-offest--2">
+    <h3>Costs</h3>
+    <app-list>
+        <th class="u-font--18 u-font--bolder">Product</th>
+        <th class="u-font--18 u-font--bolder">Quantity</th>
+
+        <tbody>
+            <tr class="u-cursor-pointer" *ngFor="let product of products">
+                <td>{{ product.name }}</td>
+                <td>{{ product.quantity }}</td>
+            </tr>
+        </tbody>
+    </app-list>
+</div>
