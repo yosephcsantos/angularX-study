@@ -1,3 +1,4 @@
+import { Product } from './product.interface';
 export interface Child {
   name: string,
   age: number
@@ -10,7 +11,8 @@ export interface Guest {
   checkedIn: boolean,
   checkedOut: boolean,
   checkInDate: number | null,
-  children: Child[] | null
+  children: Child[] | null,
+  products: Product[] | null | undefined
 }
 
 export enum FilterType {

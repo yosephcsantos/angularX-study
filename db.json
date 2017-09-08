@@ -1,4 +1,11 @@
 {
+  "products": [
+    {"id": 1, "name": "Coca-Cola", "quantity": 5},
+    {"id": 2, "name": "Pepsi", "quantity": 1},
+    {"id": 3, "name": "Sanduiche", "quantity": 2},
+    {"id": 4, "name": "Todynho", "quantity": 6},
+    {"id": 5, "name": "Coxinha", "quantity": 1}    
+  ],
   "guests": [
     {
       "id": 1,
@@ -8,7 +15,11 @@
       "checkInDate": 1490742000000,
       "checkOutDate": null,
       "children": null,
-      "creditCard": "1234 5678 9865 4328"
+      "creditCard": "1234 5678 9865 4328",
+      "products": [
+        {"id": 1, "name": "Coca-Cola", "quantity": 5},
+        {"id": 2, "name": "Pepsi", "quantity": 1}
+      ]
     },
     {
       "id": 2,
@@ -18,7 +29,8 @@
       "checkInDate": 1490742000000,
       "checkOutDate": null,
       "children": null,
-      "creditCard": "9876 1234 6785 4324"
+      "creditCard": "9876 1234 6785 4328",
+      "products": []
     },
     {
       "id": 3,
@@ -28,7 +40,11 @@
       "checkInDate": null,
       "checkOutDate": null,
       "children": null,
-      "creditCard": "5421 2345 6789 8768"
+      "creditCard": "5421 2345 6789 8768",
+      "products": [
+        {"id": 3, "name": "Sanduiche", "quantity": 2},
+        {"id": 4, "name": "Todynho", "quantity": 6}
+      ]
     },
     {
       "id": 4,
@@ -38,7 +54,8 @@
       "checkInDate": 1490742000000,
       "checkOutDate": 1504278899877,
       "children": null,
-      "creditCard": "5678 1232 3232 3232"
+      "creditCard": "5678 1232 3232 3232",
+      "products": []
     },
     {
       "id": 5,
@@ -48,7 +65,8 @@
       "checkInDate": 1490752000000,
       "checkOutDate": 1504278899877,
       "children": null,
-      "creditCard": "2345 6859 4848 9"
+      "creditCard": "2345 6859 4848 9",
+      "products": []
     }
   ]
 }

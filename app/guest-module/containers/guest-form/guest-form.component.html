@@ -1,7 +1,13 @@
 <div>
     <guest-detail
-    [detail]="guest"
-    (edit)="handleEdit($event)"
-    (remove)="handleRemove($event)">
+        [detail]="guest"
+        (edit)="handleEdit($event)"
+        (remove)="handleRemove($event)">
     </guest-detail>
+    
+    <hr>
+    
+    <guest-cost
+        [products]="guestProducts">
+    </guest-cost>
 </div>

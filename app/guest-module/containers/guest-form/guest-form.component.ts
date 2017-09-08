@@ -1,3 +1,4 @@
+import { Product } from './../../../shared-module/models/product.interface';
 import { Component, OnInit } from '@angular/core'; 
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -6,6 +7,7 @@ import 'rxjs/add/operator/switchMap';
 
 //Models
 import { Guest } from '../../../shared-module/models/guest.interface';
+import { Product } from '../../../shared-module/models/product.interface';
 
 //resources
 import { GuestDashboardResource } from '../../../shared-module/resources/guest-dashboard.resource';
@@ -21,6 +23,7 @@ import { AppRoutesEnum } from '../../../app-routes-module/app-routes-enum';
 export class GuestFormComponent implements OnInit {
   public guest: Guest;
   public guests: Guest[];
+  public guestProducts: Product[];
   
   constructor(
     private guestDashboardResource: GuestDashboardResource,
@@ -31,7 +34,10 @@ export class GuestFormComponent implements OnInit {
   ngOnInit() {
     this.route.params
       .switchMap((data: Guest) => this.guestDashboardResource.getGuest(data.id))
-      .subscribe((data: Guest) => this.guest = data);
+      .subscribe((data: Guest) => {
+        this.guest = data; 
+        this.guestProducts = data.products;
+      });
 
     this.guestDashboardResource
       .getGuests()
@@ -68,4 +74,5 @@ export class GuestFormComponent implements OnInit {
   goToPassengersPage() {
     this.router.navigate([AppRoutesEnum.Guests]);
   }
+
 }

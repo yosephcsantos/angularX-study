@@ -10,10 +10,12 @@ import { GuestDashboardResource } from './resources/guest-dashboard.resource';
 // directives
 import { CreditCardDirective } from './directives/credit-card.directive';
 import { TooltipDirective } from './directives/tooltip.directive';
+import { MyForDirective } from './directives/my-for.directive';
 
 // components
 import { PageDefaultComponent } from './components/page-default/page-default.component';
 import { AppCheckboxComponent } from './components/app-checkbox/app-checkbox.component';
+import { AppListComponent } from './components/app-list/app-list.component';
 
 @NgModule({
   imports: [
@@ -23,13 +25,17 @@ import { AppCheckboxComponent } from './components/app-checkbox/app-checkbox.com
     PageDefaultComponent,
     AppCheckboxComponent,
     CreditCardDirective,
-    TooltipDirective
+    TooltipDirective,
+    MyForDirective,
+    AppListComponent
   ],
   exports: [
     PageDefaultComponent,
     AppCheckboxComponent,
     CreditCardDirective,
-    TooltipDirective
+    TooltipDirective,
+    MyForDirective,
+    AppListComponent
   ],
   providers: [
     GuestDashboardService,

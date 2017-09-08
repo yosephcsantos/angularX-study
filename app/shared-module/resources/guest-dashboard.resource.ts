@@ -7,8 +7,10 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 
 import { Guest } from '../models/guest.interface';
+import { Product } from './../models/product.interface';
 
 const GUEST_API: string = '/api/guests';
+const PRODUCT_API: string = '/api/products';
 
 @Injectable()
 export class GuestDashboardResource {
@@ -17,6 +19,13 @@ export class GuestDashboardResource {
   getGuests(): Observable<Guest[]> {
     return this.http
       .get(GUEST_API)
+      .map((response: Response) => response.json())
+      .catch((error: any) => Observable.throw(error.json()));
+  }
+
+  getProducts(): Observable<Product[]> {
+    return this.http
+      .get(PRODUCT_API)
       .map((response: Response) => response.json())
       .catch((error: any) => Observable.throw(error.json()));
   }

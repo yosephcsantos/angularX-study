@@ -6,11 +6,11 @@ import { HttpModule } from '@angular/http';
 import { GuestDashboardComponent } from './containers/guest-dashboard/guest-dashboard.component';
 import { GuestFormComponent } from './containers/guest-form/guest-form.component';
 import { GuestFilterComponent } from './containers/guest-filter/guest-filter.component';
+import { GuestCostComponent } from './containers/guest-cost/guest-cost.component';
 
 // components
 import { GuestCountComponent } from './components/guest-count/guest-count.component';
 import { GuestDetailComponent } from './components/guest-detail/guest-detail.component';
-import { GuestListComponent } from './components/guest-list/guest-list.component';
 import { GuestMessageComponent } from './components/guest-message/guest-message.component';
 import { AppCheckboxComponent } from './../shared-module/components/app-checkbox/app-checkbox.component';
 
@@ -22,10 +22,10 @@ import { SharedModule } from '../shared-module/shared.module';
     GuestDashboardComponent,
     GuestCountComponent,
     GuestDetailComponent,
-    GuestListComponent,
     GuestFormComponent,
     GuestFilterComponent,
-    GuestMessageComponent
+    GuestMessageComponent,
+    GuestCostComponent
   ],
   imports: [
     CommonModule,

@@ -34,13 +34,13 @@
         </span>
     </guest-filter>
 
-    <guest-list class="body-data">
+    <app-list class="body-data">
         <th class="u-font--18 u-font--bolder">Guest name</th>
         <th class="u-font--18 u-font--bolder">Checkin date</th>
         <th class="u-font--18 u-font--bolder">Checkout date</th>
         
         <tbody>
-            <tr class="u-cursor-pointer" *ngFor="let guest of guestsView;" (click)="handlePassenger(guest.id)">
+            <tr class="u-cursor-pointer" *myFor="let guest of guestsView;" (click)="handlePassenger(guest.id)">
                 <td>{{ guest.fullname }}</td>
                 <td>
                     {{ guest.checkInDate ? (guest.checkInDate | date: 'yMMMMd' | uppercase) : 'Not checked in' }}
@@ -50,5 +50,5 @@
                 </td> 
             </tr>
         </tbody>
-    </guest-list>
+    </app-list>
 </page-default>
