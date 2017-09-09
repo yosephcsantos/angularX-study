@@ -102,7 +102,7 @@ h4 {
   border-color: transparent rgba(0, 0, 0, 0.7) transparent transparent;
   display: block;
 }
-span {
+span.helper {
   color: #9f72e6;
   text-decoration: underline;
   font-size: 12px;

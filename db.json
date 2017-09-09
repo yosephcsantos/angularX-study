@@ -1,10 +1,10 @@
 {
   "products": [
-    {"id": 1, "name": "Coca-Cola", "quantity": 5},
-    {"id": 2, "name": "Pepsi", "quantity": 1},
-    {"id": 3, "name": "Sanduiche", "quantity": 2},
-    {"id": 4, "name": "Todynho", "quantity": 6},
-    {"id": 5, "name": "Coxinha", "quantity": 1}    
+    {"product_id": 1, "name": "Coca-Cola", "quantity": 5},
+    {"product_id": 2, "name": "Pepsi", "quantity": 1},
+    {"product_id": 3, "name": "Sanduiche", "quantity": 2},
+    {"product_id": 4, "name": "Todynho", "quantity": 6},
+    {"product_id": 5, "name": "Coxinha", "quantity": 1}    
   ],
   "guests": [
     {
@@ -17,8 +17,8 @@
       "children": null,
       "creditCard": "1234 5678 9865 4328",
       "products": [
-        {"id": 1, "name": "Coca-Cola", "quantity": 5},
-        {"id": 2, "name": "Pepsi", "quantity": 1}
+        {"product_id": 1, "name": "Coca-Cola", "quantity": 5},
+        {"product_id": 2, "name": "Pepsi", "quantity": 1}
       ]
     },
     {
@@ -42,8 +42,8 @@
       "children": null,
       "creditCard": "5421 2345 6789 8768",
       "products": [
-        {"id": 3, "name": "Sanduiche", "quantity": 2},
-        {"id": 4, "name": "Todynho", "quantity": 6}
+        {"product_id": 3, "name": "Sanduiche", "quantity": 2},
+        {"product_id": 4, "name": "Todynho", "quantity": 6}
       ]
     },
     {

@@ -1,4 +1,3 @@
-import { Product } from './../../../shared-module/models/product.interface';
 import { Component, OnInit } from '@angular/core'; 
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -24,6 +23,7 @@ export class GuestFormComponent implements OnInit {
   public guest: Guest;
   public guests: Guest[];
   public guestProducts: Product[];
+  public stockProducts: Product[];
   
   constructor(
     private guestDashboardResource: GuestDashboardResource,
@@ -42,6 +42,10 @@ export class GuestFormComponent implements OnInit {
     this.guestDashboardResource
       .getGuests()
       .subscribe((data: Guest[]) => this.guests = data);
+
+    this.guestDashboardResource
+      .getProducts()
+      .subscribe((data: Product[]) => this.stockProducts = data);
   }
 
   handleEdit(event: Guest) {

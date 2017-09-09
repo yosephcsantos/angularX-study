@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // containers
 import { GuestDashboardComponent } from './containers/guest-dashboard/guest-dashboard.component';
@@ -30,7 +31,8 @@ import { SharedModule } from '../shared-module/shared.module';
   imports: [
     CommonModule,
     HttpModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   exports: [
     GuestDashboardComponent,
