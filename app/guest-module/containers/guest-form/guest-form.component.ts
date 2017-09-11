@@ -1,3 +1,4 @@
+import { Item } from './../../../shared-module/models/product.interface';
 import { Component, OnInit } from '@angular/core'; 
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -22,7 +23,7 @@ import { AppRoutesEnum } from '../../../app-routes-module/app-routes-enum';
 export class GuestFormComponent implements OnInit {
   public guest: Guest;
   public guests: Guest[];
-  public guestProducts: Product[];
+  public guestProducts: Item[];
   public stockProducts: Product[];
   
   constructor(

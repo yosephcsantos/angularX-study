@@ -21,22 +21,6 @@ export class StockSelectorComponent {
     added = new EventEmitter();
 
     onAdd() {
-        this.parent.get('selector').value.name = this.getProductName(this.parent.get('selector').value.product_id);
-     
-        if(this.parent.get('selector').value.name)
-            this.added.emit(this.parent.get('selector').value);
-    }
-
-    getProductName(product_id: number) {
-        let productSelected;
-        
-        this.products.forEach((product)=> {
-            if(product.product_id == product_id) {
-                productSelected = product;
-            }
-        })
-
-        if(productSelected)
-            return productSelected.name;
+        this.added.emit(this.parent.get('selector').value);
     }
 }

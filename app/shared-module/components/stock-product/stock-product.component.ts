@@ -1,3 +1,4 @@
+import { Product } from './../../models/product.interface';
 import { FormGroup, FormArray } from '@angular/forms';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
@@ -31,9 +32,16 @@ export class StockProductComponent {
   
     @Output()
     removed = new EventEmitter<any>();
+
+    @Input()
+    map: Map<number, Product>;
   
     onRemove(group, index) {
       this.removed.emit({ group, index });
+    }
+
+    getProduct(id) {
+        return this.map.get(id);
     }
   
     get stocks() {

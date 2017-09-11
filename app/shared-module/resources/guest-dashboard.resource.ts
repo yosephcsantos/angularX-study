@@ -7,7 +7,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 
 import { Guest } from '../models/guest.interface';
-import { Product } from './../models/product.interface';
+import { Product, Item } from './../models/product.interface';
 
 const GUEST_API: string = '/api/guests';
 const PRODUCT_API: string = '/api/products';
@@ -19,13 +19,6 @@ export class GuestDashboardResource {
   getGuests(): Observable<Guest[]> {
     return this.http
       .get(GUEST_API)
-      .map((response: Response) => response.json())
-      .catch((error: any) => Observable.throw(error.json()));
-  }
-
-  getProducts(): Observable<Product[]> {
-    return this.http
-      .get(PRODUCT_API)
       .map((response: Response) => response.json())
       .catch((error: any) => Observable.throw(error.json()));
   }
@@ -53,6 +46,20 @@ export class GuestDashboardResource {
   removeGuest(guest: Guest): Observable<Guest> {
     return this.http
       .delete(`${GUEST_API}/${guest.id}`)
+      .map((response: Response) => response.json())
+      .catch((error: any) => Observable.throw(error.json()));
+  }
+
+  getCartItems(): Observable<Item[]> {
+    return this.http
+      .get('/api/cart')
+      .map((response: Response) => response.json())
+      .catch((error: any) => Observable.throw(error.json()));
+  }
+
+  getProducts(): Observable<Product[]> {
+    return this.http
+      .get(PRODUCT_API)
       .map((response: Response) => response.json())
       .catch((error: any) => Observable.throw(error.json()));
   }

@@ -4,7 +4,7 @@
             <div class="stock-product__content" [formGroupName]="i">
                 <div class="stock-product__name">
                     <span>
-                        {{ item.value.name }}
+                        {{ getProduct(item.value.product_id).name }}
                     </span>
                 </div>
                 
