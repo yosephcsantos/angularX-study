@@ -21,6 +21,7 @@ export class StockSelectorComponent {
     added = new EventEmitter();
 
     onAdd() {
-        this.added.emit(this.parent.get('selector').value);
+        if(this.parent.get('selector').value.product_id)
+            this.added.emit(this.parent.get('selector').value);
     }
 }
