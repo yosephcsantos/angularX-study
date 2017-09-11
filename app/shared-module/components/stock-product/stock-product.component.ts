@@ -6,9 +6,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     selector: 'stock-product',
     templateUrl: 'stock-product.component.html',
     styles: [`
-        .stock-product__name {
+        .stock-product {
             float:left;
             display: inline;
+            margin-top:5px;
         }
         .stock-product__content {
             width:302px;
