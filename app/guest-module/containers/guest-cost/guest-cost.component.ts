@@ -18,6 +18,7 @@ import { GuestDashboardResource } from './../../../shared-module/resources/guest
 export class GuestCostComponent implements OnInit {
     public form: FormGroup;
     public productMap: Map<number, Product>;
+    public total: number;
 
     @Input()
     products: Product[];
@@ -42,7 +43,19 @@ export class GuestCostComponent implements OnInit {
             .map<[number, Product]>(product => [product.product_id, product]);
           this.productMap = new Map<number, Product>(myMap);
           cart.forEach(item => this.addProduct(item));
+
+          this.calculateTotal(this.form.get('stock').value);
+          this.form.get('stock')
+            .valueChanges.subscribe(value => this.calculateTotal(value));
         });
+    }
+
+    calculateTotal(value: Item[]) {
+        const total = value.reduce((prev, next) => {
+            return prev + (next.quantity * this.productMap.get(next.product_id).price);
+        }, 0);
+        
+        this.total = total;
     }
 
     setForm() {

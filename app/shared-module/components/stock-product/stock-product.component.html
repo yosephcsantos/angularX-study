@@ -1,4 +1,4 @@
-<div class="stock-product" [formGroup]="parent">
+<div [formGroup]="parent">
     <div formArrayName="stock">
         <div *ngFor="let item of stocks; let i = index;" class="stock-height u-vertical-offest--1">
             <div class="stock-product__content" [formGroupName]="i">

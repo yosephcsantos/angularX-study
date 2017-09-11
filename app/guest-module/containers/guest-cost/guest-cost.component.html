@@ -15,5 +15,11 @@
             [map]="productMap"
             (removed)="removeProduct($event)">
         </stock-product>
+        
+        <div class="u-vertical-offest--2"></div>
+
+        <div>
+           <strong> Total: {{ total | currency:'USD':true }} </strong>
+        </div>
     </form>
 </div>
