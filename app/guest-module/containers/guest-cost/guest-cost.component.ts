@@ -21,7 +21,7 @@ export class GuestCostComponent implements OnInit {
     public total: number;
 
     @Output()
-    updated = new EventEmitter<Product>(); // id, preço
+    updated = new EventEmitter<Product>();
 
     @Input()
     products: Product[];
