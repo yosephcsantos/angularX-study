@@ -69,8 +69,8 @@ export class GuestCostComponent implements OnInit {
     }
 
     addProduct(stock) {
-        const control = this.form.get('stock') as FormArray;
-        control.push(this.createStock(stock));
+        const controlArray = this.getStockControlArray();
+        controlArray.push(this.createStock(stock));
     }
     
     createStock(stock) {
@@ -81,8 +81,13 @@ export class GuestCostComponent implements OnInit {
     }
 
     removeProduct({ group, index }: { group: FormGroup, index: number }) {
-        const control = this.form.get('stock') as FormArray;
-        control.removeAt(index);
+        const controlArray = this.getStockControlArray();
+        controlArray.removeAt(index);
     }
+
+    private getStockControlArray(): FormArray{
+        return this.form.get('stock') as FormArray;
+    }
+    
 
 }
