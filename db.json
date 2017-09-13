@@ -1,42 +1,26 @@
 {
   "cart": [
-    {
-      "product_id": 1,
-      "quantity": 10
-    },
-    {
-      "product_id": 3,
-      "quantity": 50
-    }
+    { "product_id": 1, "quantity": 10 },
+    { "product_id": 3, "quantity": 50 }
   ],
   "products": [
-    {
-      "product_id": 1,
-      "name": "Coca-Cola",
-      "price": 5
-    },
-    {
-      "product_id": 2,
-      "name": "Pepsi",
-      "price": 1
-    },
-    {
-      "product_id": 3,
-      "name": "Sanduiche",
-      "price": 2
-    },
-    {
-      "product_id": 4,
-      "name": "Todynho",
-      "price": 6
-    },
-    {
-      "product_id": 5,
-      "name": "Coxinha",
-      "price": 1
-    }
+    {"product_id": 1, "name": "Coca-Cola", "price": 5},
+    {"product_id": 2, "name": "Pepsi", "price": 1},
+    {"product_id": 3, "name": "Sanduiche", "price": 2},
+    {"product_id": 4, "name": "Todynho", "price": 6},
+    {"product_id": 5, "name": "Coxinha", "price": 1}    
   ],
   "guests": [
+    {
+      "id": 1,
+      "fullname": "Yoseph Cunha",
+      "checkedIn": true,
+      "checkedOut": false,
+      "checkInDate": 1490742000000,
+      "checkOutDate": null,
+      "children": null,
+      "creditCard": "1234 5678 9865 4328"
+    },
     {
       "id": 2,
       "fullname": "Jeniffer Carvalho",
@@ -46,6 +30,16 @@
       "checkOutDate": null,
       "children": null,
       "creditCard": "9876 1234 6785 4328"
+    },
+    {
+      "id": 3,
+      "fullname": "Louise Slaviero",
+      "checkedIn": false,
+      "checkedOut": false,
+      "checkInDate": null,
+      "checkOutDate": null,
+      "children": null,
+      "creditCard": "5421 2345 6789 8768"
     },
     {
       "id": 4,
