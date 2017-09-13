@@ -1,4 +1,3 @@
-import { Item } from './../../../shared-module/models/product.interface';
 import { Component, OnInit } from '@angular/core'; 
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -7,7 +6,7 @@ import 'rxjs/add/operator/switchMap';
 
 //Models
 import { Guest } from '../../../shared-module/models/guest.interface';
-import { Product } from '../../../shared-module/models/product.interface';
+import { Product, Item } from '../../../shared-module/models/product.interface';
 
 //resources
 import { GuestDashboardResource } from '../../../shared-module/resources/guest-dashboard.resource';
@@ -78,6 +77,10 @@ export class GuestFormComponent implements OnInit {
 
   goToPassengersPage() {
     this.router.navigate([AppRoutesEnum.Guests]);
+  }
+
+  updateProduct(product: Product){
+    // TODO: Atualizar Produto no banco.
   }
 
 }

@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/forkJoin';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, FormArray } from '@angular/forms';
 
 // models
@@ -19,6 +19,9 @@ export class GuestCostComponent implements OnInit {
     public form: FormGroup;
     public productMap: Map<number, Product>;
     public total: number;
+
+    @Output()
+    updated = new EventEmitter<Product>(); // id, preço
 
     @Input()
     products: Product[];
@@ -81,8 +84,18 @@ export class GuestCostComponent implements OnInit {
     }
 
     removeProduct({ group, index }: { group: FormGroup, index: number }) {
-        const control = this.form.get('stock') as FormArray;
-        control.removeAt(index);
+        const controlArray = this.getControlArrayOfStock();
+        controlArray.removeAt(index);
     }
 
+    updateProduct({ group, index }: { group: FormGroup, index: number }) {
+        const controlArray = this.getControlArrayOfStock();
+        const control = controlArray.at(index) as FormControl;
+        const product = this.productMap.get(control.get('product_id').value);
+        this.updated.emit(product);
+    }
+
+    private getControlArrayOfStock(): FormArray{
+        return this.form.get('stock') as FormArray;
+    }
 }

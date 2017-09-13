@@ -30,13 +30,20 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class StockProductComponent {
     @Input()
     parent: FormGroup;
-  
-    @Output()
-    removed = new EventEmitter<any>();
 
     @Input()
     map: Map<number, Product>;
   
+    @Output()
+    removed = new EventEmitter<any>();
+
+    @Output()
+    updated = new EventEmitter();
+
+    onUpdate(group, index) {
+        this.updated.emit({ group, index });
+    }
+
     onRemove(group, index) {
       this.removed.emit({ group, index });
     }
