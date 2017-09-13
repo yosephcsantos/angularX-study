@@ -13,8 +13,9 @@
         <stock-product
             [parent]="form"
             [map]="productMap"
-            (removed)="removeProduct($event)">
-        </stock-product>
+            (removed)="removeProduct($event)"
+            (updated)="updateProduct($event)">
+        </stock-product> 
         
         <div class="u-vertical-offest--2"></div>
 
